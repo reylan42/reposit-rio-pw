@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,9 +15,10 @@
 
 body{
     font-family:Arial, sans-serif;
-    background:#f4f4f4;
+    background:linear-gradient(135deg, #009739, #ffdf00);
     color:#333;
     line-height:1.6;
+    min-height:100vh;
 }
 
 header{
@@ -226,3 +228,4 @@ function mostrarCuriosidade(){
 
 </body>
 </html>
+
