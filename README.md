@@ -53,7 +53,7 @@ main{
 }
 
 section{
-    background:white;
+    background: linear-gradient(135deg, #ffffff, #d9f99d);
     margin-bottom:20px;
     padding:25px;
     border-radius:10px;
@@ -214,9 +214,9 @@ footer{
     <button onclick="mostrarTime('alhilal')">Al-Hilal</button>
     <button onclick="mostrarTime('selecao')">Seleção Brasileira</button>
 
-    <div id="infoTime">
-        Clique em um time para ver informações.
-    </div>
+    <article id="infoTime">
+    Clique em um time para ver informações.
+</article>
 </section>
 
 <section id="curiosidades">
@@ -307,5 +307,3 @@ function mostrarTime(time){
 </body>
 </html>
 ```
-
-
