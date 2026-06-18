@@ -39,6 +39,7 @@ nav a{
     text-decoration:none;
     margin:0 15px;
     font-weight:bold;
+    transition:0.3s;
 }
 
 nav a:hover{
@@ -72,6 +73,7 @@ img{
     width:300px;
     max-width:100%;
     border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
 ul{
@@ -105,16 +107,26 @@ button{
     padding:10px 20px;
     border-radius:5px;
     cursor:pointer;
+    margin:5px;
+    transition:0.3s;
 }
 
 button:hover{
-    background:#00782f;
+    background:#006d2a;
 }
 
 #resultado{
     margin-top:15px;
     font-weight:bold;
     color:#009739;
+}
+
+#infoTime{
+    margin-top:20px;
+    background:#f4f4f4;
+    padding:15px;
+    border-radius:8px;
+    border-left:5px solid #009739;
 }
 
 footer{
@@ -135,6 +147,7 @@ footer{
 <nav>
     <a href="#sobre">Sobre</a>
     <a href="#carreira">Carreira</a>
+    <a href="#times">Times</a>
     <a href="#curiosidades">Curiosidades</a>
 </nav>
 
@@ -144,7 +157,7 @@ footer{
     <h2>Sobre Neymar</h2>
 
     <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Neymar_2018.jpg" alt="Neymar Jr">
+        <img src="https://images.ctfassets.net/3mv54pzvptwz/55YLwKPDnRXkqMBITRpWbC/0c2aefc04afa455c20e9ca0d209698e0/53174188191_42d4c831ae_o.jpg" alt="Neymar Jr">
     </figure>
 
     <p>
@@ -186,10 +199,24 @@ footer{
         </tr>
 
         <tr>
-            <td>Olimpíadas</td>
+            <td>Ouro Olímpico</td>
             <td>2016</td>
         </tr>
     </table>
+</section>
+
+<section id="times">
+    <h2>Times em que Neymar Jogou</h2>
+
+    <button onclick="mostrarTime('santos')">Santos FC</button>
+    <button onclick="mostrarTime('barcelona')">Barcelona</button>
+    <button onclick="mostrarTime('psg')">PSG</button>
+    <button onclick="mostrarTime('alhilal')">Al-Hilal</button>
+    <button onclick="mostrarTime('selecao')">Seleção Brasileira</button>
+
+    <div id="infoTime">
+        Clique em um time para ver informações.
+    </div>
 </section>
 
 <section id="curiosidades">
@@ -205,17 +232,18 @@ footer{
 </main>
 
 <footer>
-    <p>Site desenvolvido com HTML, CSS e JavaScript.</p>
+    <p>Site desenvolvido para Neymar jr</p>
 </footer>
 
 <script>
+
 function mostrarCuriosidade(){
 
     const curiosidades = [
         "Neymar estreou profissionalmente aos 17 anos.",
-        "Foi campeão da Libertadores pelo Santos.",
+        "Foi campeão da Libertadores pelo Santos em 2011.",
         "Marcou o gol do ouro olímpico do Brasil em 2016.",
-        "Já atuou em grandes clubes da Europa.",
+        "Foi a transferência mais cara da história em 2017.",
         "É um dos maiores artilheiros da Seleção Brasileira."
     ];
 
@@ -224,8 +252,60 @@ function mostrarCuriosidade(){
     document.getElementById("resultado").textContent =
     curiosidades[sorteio];
 }
+
+function mostrarTime(time){
+
+    const info = {
+
+        santos: `
+            <h3>Santos FC</h3>
+            <p>
+                Clube onde Neymar iniciou sua carreira profissional.
+                Conquistou a Libertadores de 2011 e encantou o mundo
+                com seus dribles e gols.
+            </p>
+        `,
+
+        barcelona: `
+            <h3>Barcelona</h3>
+            <p>
+                Jogou ao lado de Messi e Suárez no famoso trio MSN.
+                Conquistou a Champions League em 2015.
+            </p>
+        `,
+
+        psg: `
+            <h3>Paris Saint-Germain (PSG)</h3>
+            <p>
+                Tornou-se a contratação mais cara da história do futebol
+                em 2017. Conquistou vários títulos franceses.
+            </p>
+        `,
+
+        alhilal: `
+            <h3>Al-Hilal</h3>
+            <p>
+                Clube da Arábia Saudita que contratou Neymar em 2023.
+                Representou uma das maiores transferências do futebol árabe.
+            </p>
+        `,
+
+        selecao: `
+            <h3>Seleção Brasileira</h3>
+            <p>
+                Defendeu o Brasil em diversas competições internacionais
+                e conquistou a medalha de ouro olímpica em 2016.
+            </p>
+        `
+    };
+
+    document.getElementById("infoTime").innerHTML = info[time];
+}
+
 </script>
 
 </body>
 </html>
+```
+
 
