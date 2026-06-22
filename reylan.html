@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neymar Jr</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header>
+    <h1>Neymar Jr</h1>
+    <p>Um dos maiores jogadores brasileiros da história</p>
+</header>
+
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#carreira">Carreira</a>
+    <a href="#times">Times</a>
+    <a href="#curiosidades">Curiosidades</a>
+</nav>
+
+<main>
+
+<section id="sobre">
+    <h2>Sobre Neymar</h2>
+
+    <figure>
+        <img src="https://images.ctfassets.net/3mv54pzvptwz/55YLwKPDnRXkqMBITRpWbC/0c2aefc04afa455c20e9ca0d209698e0/53174188191_42d4c831ae_o.jpg" alt="Neymar Jr">
+    </figure>
+
+    <p>
+        Neymar da Silva Santos Júnior nasceu em 5 de fevereiro de 1992.
+        É conhecido mundialmente por sua habilidade, velocidade,
+        criatividade e capacidade de decidir partidas importantes.
+    </p>
+</section>
+
+<section id="carreira">
+    <h2>Clubes</h2>
+
+    <ul>
+        <li>Santos FC</li>
+        <li>Barcelona</li>
+        <li>Paris Saint-Germain (PSG)</li>
+        <li>Al-Hilal</li>
+        <li>Seleção Brasileira</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Conquistas</h2>
+
+    <table>
+        <tr>
+            <th>Título</th>
+            <th>Ano</th>
+        </tr>
+
+        <tr>
+            <td>Libertadores</td>
+            <td>2011</td>
+        </tr>
+
+        <tr>
+            <td>Champions League</td>
+            <td>2015</td>
+        </tr>
+
+        <tr>
+            <td>Ouro Olímpico</td>
+            <td>2016</td>
+        </tr>
+    </table>
+</section>
+
+<section id="times">
+    <h2>Times em que Neymar Jogou</h2>
+
+    <button onclick="mostrarTime('santos')">Santos FC</button>
+    <button onclick="mostrarTime('barcelona')">Barcelona</button>
+    <button onclick="mostrarTime('psg')">PSG</button>
+    <button onclick="mostrarTime('alhilal')">Al-Hilal</button>
+    <button onclick="mostrarTime('selecao')">Seleção Brasileira</button>
+
+    <article id="infoTime">
+        Clique em um time para ver informações.
+    </article>
+</section>
+
+<section id="curiosidades">
+    <h2>Curiosidades</h2>
+
+    <button onclick="mostrarCuriosidade()">
+        Mostrar Curiosidade
+    </button>
+
+    <p id="resultado"></p>
+</section>
+
+</main>
+
+<footer>
+    <p>Site desenvolvido para Neymar Jr</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
